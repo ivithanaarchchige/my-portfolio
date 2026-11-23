@@ -1,0 +1,12 @@
+* { box-sizing: border-box; }
+:root { color-scheme: light; font-family: system-ui, sans-serif; color: #1f2421; background: #f8f7f2; }
+body { margin: 0; }
+main { width: min(100% - 2rem, 68rem); margin: 0 auto 3rem; }
+.demo-nav { display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding: 1.25rem 0; border-bottom: 1px solid currentColor; }
+.demo-nav a, .demo-nav button { color: inherit; font: inherit; font-weight: 650; }
+.demo-nav button { cursor: pointer; border: 1px solid currentColor; border-radius: .25rem; padding: .35rem .6rem; background: transparent; }
+h1 { margin: 1.4rem 0 .45rem; font-size: clamp(1.9rem, 4.5vw, 3.5rem); line-height: 1.06; letter-spacing: -.045em; }
+p { max-width: 69ch; margin: 0 0 1.2rem; line-height: 1.55; }
+.demo-space { position: relative; width: 100%; aspect-ratio: var(--stage-ratio); overflow: hidden; background: #202124; border: 1px solid #202124; }
+.demo-space iframe { border: 0; display: block; position: absolute; inset: 0 auto auto 0; transform-origin: left top; }
+:focus-visible { outline: 3px solid #ab391c; outline-offset: 4px; }

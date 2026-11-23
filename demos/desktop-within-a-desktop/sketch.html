@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Interactive desktop drawing</title>
+        <script type="text/javascript" src="../shared/p5.js"></script>
+        <script type="text/javascript" src="js/sketch1.js"></script>
+        <style>
+            body { margin: 0; overflow: hidden; background: #444; }
+            .board { position: relative; transform: translate(-125px, -258px); }
+            .overlay {
+                position: absolute;
+                top: 350px;
+                left: 250px;
+                width: 490px; 
+                height: 290px; 
+                overflow: hidden;
+               
+            }
+            .overlay2 {
+                position: absolute;
+                width: 490px; 
+                height: 290px; 
+            }
+            @keyframes slideUp {
+                from {
+                    top: 0;
+                }
+                to {
+                    top: -290px;
+                }
+            }
+            .slide-up {
+                animation: slideUp 1s forwards; 
+            }
+            #unlock { position: absolute; inset: 0; background: transparent; border: 0; cursor: pointer; }
+            #unlock:focus-visible { outline: 4px solid white; outline-offset: -7px; }
+            @media (prefers-reduced-motion: reduce) {
+                .slide-up { animation-duration: 0.01s; }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="board">
+            <div id="A2Sketch" class="overlay2"></div>
+            <div id="sketchContainer" class="overlay">
+                <div id="A3Sketch" style="position: absolute;"></div>
+                <div id="A1Sketch" style="position: absolute;"></div>
+                <button id="unlock" type="button" aria-label="Unlock illustrated monitor"></button>
+            </div>
+        </div>
+        
+    </body>
+</html>

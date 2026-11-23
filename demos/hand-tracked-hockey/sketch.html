@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Air hockey arena</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; color: white; background: #151822; font: 20px system-ui, sans-serif; }
+    .controls { min-height: 60px; display: flex; align-items: center; gap: 18px; padding: 0 20px; }
+    button { cursor: pointer; background: #eceff3; color: #161822; border: 0; border-radius: 4px; font: inherit; padding: 6px 14px; }
+    button:focus-visible, canvas:focus-visible { outline: 3px solid #ffd428; outline-offset: -4px; }
+    canvas { display: block; touch-action: none; }
+  </style>
+  <script src="../shared/p5.js"></script>
+  <script src="js/sketch.js"></script>
+</head>
+<body>
+  <div class="controls">
+    <button id="camera" type="button" aria-pressed="false">Camera</button>
+    <button id="serve" type="button">New match</button>
+    <span id="status" role="status">Keyboard and touch controls are ready.</span>
+  </div>
+</body>
+</html>
