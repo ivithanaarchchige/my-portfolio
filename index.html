@@ -1,10 +1,248 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <title>my-portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore games, creative coding, visual design, and programming projects by Isuru Vithanaarchchige.">
+  <meta name="theme-color" content="#f7f5ee">
+  <title>Isuru Vithanaarchchige | Game Development &amp; Design</title>
+  <link rel="icon" type="image/png" href="assets/mark.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="filters.js" defer></script>
 </head>
 <body>
-  <h1>Hello World</h1>
-  <p>This is my portfolio site.</p>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="wrap masthead">
+    <a class="site-name" href="index.html">
+      <span class="mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+      Isuru Vithanaarchchige
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#about">About</a>
+    </nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-layout">
+      <div class="hero-copy">
+        <p class="eyebrow">Game development &amp; design</p>
+        <h1 id="hero-title">Playful by<br><em>design.</em></h1>
+        <p>I’m Isuru. I make games, interactive experiments, and visual stories. Here’s what I built at the University of Toronto Mississauga.</p>
+        <a class="action" href="#projects">Explore my projects</a>
+      </div>
+      <div class="hero-art">
+        <a class="hero-print" href="projects/rhetorica.html">
+          <img src="assets/rhetorica/village.webp" width="1440" height="810" alt="The illustrated village of Rhetorica">
+          <span>Rhetorica</span>
+        </a>
+        <a class="hero-sticker" href="projects/slime-o-matic.html" aria-label="Explore Slime-O-Matic 3000">
+          <img src="assets/projects/blue-slime.svg" alt="">
+        </a>
+        <span class="hero-spark" aria-hidden="true">✳</span>
+      </div>
+    </div>
+  </section>
+  <section id="projects" class="wrap work" aria-labelledby="project-heading">
+    <div class="work-header">
+      <h2 id="project-heading" class="section-heading">Projects</h2>
+      <p>Open any project to see how it works and try it when a demo is available.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter projects" hidden>
+      <button class="filter" type="button" data-filter="all" aria-pressed="true">All work</button>
+      <button class="filter" type="button" data-filter="games" aria-pressed="false">Games &amp; 3D</button>
+      <button class="filter" type="button" data-filter="code" aria-pressed="false">Creative coding</button>
+      <button class="filter" type="button" data-filter="design" aria-pressed="false">Design</button>
+      <button class="filter" type="button" data-filter="data" aria-pressed="false">Programming &amp; data</button>
+    </div>
+    <p id="filter-results" class="visually-hidden" role="status"></p>
+    <ul class="project-grid">
+    <li class="project-card" data-category="games">
+      <a class="project-link" href="projects/spear-headed.html" aria-labelledby="title-spear-headed">
+        <div class="project-thumb" style="--accent: #c0dca5"><img src="assets/unity/spear-headed-menu.webp" alt="" decoding="async"></div>
+        <p class="project-type">Unity game</p>
+        <h3 id="title-spear-headed">Spear Headed</h3>
+        <p class="project-summary">A first-person dungeon game with spear combat, platforming, and three routes to the Skeleton King.</p>
+      </a>
+    </li>
+    <li class="project-card" data-category="code">
+      <a class="project-link" href="projects/slime-o-matic.html" aria-labelledby="title-slime-o-matic">
+        <div class="project-thumb inset" style="--accent: #d9f491"><img src="assets/projects/slime-machine.webp" alt="" decoding="async"></div>
+        <p class="project-type">Interactive sketch</p>
+        <h3 id="title-slime-o-matic">Slime-O-Matic 3000</h3>
+        <p class="project-summary">Build a little slime by choosing its size, selecting a colour, and giving it a name.</p>
+      </a>
+    </li>
+    <li class="project-card" data-category="design">
+      <a class="project-link" href="projects/imagine-magazine.html" aria-labelledby="title-imagine-magazine">
+        <div class="project-thumb" style="--accent: #f8bacf"><img src="assets/coursework/imagine-magazine.webp" alt="" decoding="async"></div>
+        <p class="project-type">Editorial design</p>
+        <h3 id="title-imagine-magazine">Imagine, Vol. 1</h3>
+        <p class="project-summary">A 21-page magazine about how artists build believable places in video games.</p>
+      </a>
+    </li>
+    <li class="project-card" data-category="games">
+      <a class="project-link" href="projects/rhetorica.html" aria-labelledby="title-rhetorica">
+        <div class="project-thumb" style="--accent: #f9ce8f"><img src="assets/rhetorica/village.webp" alt="" loading="lazy" decoding="async"></div>
+        <p class="project-type">Visual novel</p>
+        <h3 id="title-rhetorica">Rhetorica</h3>
+        <p class="project-summary">An illustrated fantasy adventure that turns rhetoric and media literacy into story choices.</p>
+      </a>
+    </li>
+    <li class="project-card" data-category="code">
+      <a class="project-link" href="projects/hand-tracked-hockey.html" aria-labelledby="title-hand-tracked-hockey">
+        <div class="project-thumb" style="--accent: #bef0f0"><img src="assets/projects/hand-tracked-hockey.webp" alt="" loading="lazy" decoding="async"></div>
+        <p class="project-type">Browser game</p>
+        <h3 id="title-hand-tracked-hockey">Hand-Tracked Air Hockey</h3>
+        <p class="project-summary">Two players move paddles with their fingertips in a camera-controlled air hockey experiment.</p>
+      </a>
+    </li>
+    <li class="project-card" data-category="games">
+      <a class="project-link" href="projects/immersive-environment-replica.html" aria-labelledby="title-immersive-environment-replica">
+        <div class="project-thumb" style="--accent: #ded4ff"><img src="assets/unity/replica-gameplay.webp" alt="" loading="lazy" decoding="async"></div>
+        <p class="project-type">3D environment</p>
+        <h3 id="title-immersive-environment-replica">Replica</h3>
+        <p class="project-summary">An immersive house replica where you have four minutes to pack your books and catch the bus.</p>
+      </a>
+    </li>
+    <li class="project-card" data-category="design">
+      <a class="project-link" href="projects/illustrated-portfolio.html" aria-labelledby="title-illustrated-portfolio">
+        <div class="project-thumb" style="--accent: #deedb7"><img src="assets/projects/illustrated-portfolio.webp" alt="" loading="lazy" decoding="async"></div>
+        <p class="project-type">Illustrated website</p>
+        <h3 id="title-illustrated-portfolio">The Shroom Portfolio</h3>
+        <p class="project-summary">An early portfolio that creates a little mushroom world through icons, backgrounds, and type.</p>
+      </a>
+    </li>
+    <li class="project-card" data-category="design">
+      <a class="project-link" href="projects/materials-publication.html" aria-labelledby="title-materials-publication">
+        <div class="project-thumb" style="--accent: #fac999"><img src="assets/coursework/materials-publication.webp" alt="" loading="lazy" decoding="async"></div>
+        <p class="project-type">Interactive publication</p>
+        <h3 id="title-materials-publication">Materials</h3>
+        <p class="project-summary">An illustrated digital publication about how surfaces bring game worlds to life.</p>
+      </a>
+    </li>
+    <li class="project-card" data-category="games">
+      <a class="project-link" href="projects/tower-defense.html" aria-labelledby="title-tower-defense">
+        <div class="project-thumb" style="--accent: #c7dec0"><img src="assets/unity/tower-defense-gameplay.webp" alt="" loading="lazy" decoding="async"></div>
+        <p class="project-type">Unity prototype</p>
+        <h3 id="title-tower-defense">Calamity</h3>
+        <p class="project-summary">A natural-disaster-themed tower defense prototype built around a winding river path.</p>
+      </a>
+    </li>
+    <li class="project-card" data-category="code">
+      <a class="project-link" href="projects/desktop-within-a-desktop.html" aria-labelledby="title-desktop-within-a-desktop">
+        <div class="project-thumb" style="--accent: #ddcff6"><img src="assets/projects/desktop-within-a-desktop.webp" alt="" loading="lazy" decoding="async"></div>
+        <p class="project-type">Interactive sketch</p>
+        <h3 id="title-desktop-within-a-desktop">Desktop Within a Desktop</h3>
+        <p class="project-summary">An illustrated computer that opens into a tiny desktop interface inside its own screen.</p>
+      </a>
+    </li>
+    <li class="project-card" data-category="data">
+      <a class="project-link" href="projects/fog.html" aria-labelledby="title-fog">
+        <div class="project-thumb" style="--accent: #d7cef8"><img src="assets/projects/fog.webp" alt="" loading="lazy" decoding="async"></div>
+        <p class="project-type">Desktop app</p>
+        <h3 id="title-fog">FOG Game Library</h3>
+        <p class="project-summary">A desktop storefront and game library that remembers the games attached to an account.</p>
+      </a>
+    </li>
+    <li class="project-card" data-category="games">
+      <a class="project-link" href="projects/asteroid-dodger.html" aria-labelledby="title-asteroid-dodger">
+        <div class="project-thumb inset" style="--accent: #c1d7ff"><img src="assets/projects/asteroid-dodger.webp" alt="" loading="lazy" decoding="async"></div>
+        <p class="project-type">Arcade game</p>
+        <h3 id="title-asteroid-dodger">Asteroid Dodger</h3>
+        <p class="project-summary">A scrolling space shooter with asteroid hazards, two ship styles, and three lives.</p>
+      </a>
+    </li>
+    <li class="project-card" data-category="code">
+      <a class="project-link" href="projects/pc-boot.html" aria-labelledby="title-pc-boot">
+        <div class="project-thumb" style="--accent: #ffc5ad"><img src="assets/projects/pc-boot.webp" alt="" loading="lazy" decoding="async"></div>
+        <p class="project-type">Animated sketch</p>
+        <h3 id="title-pc-boot">PC Boot Animation</h3>
+        <p class="project-summary">A computer startup sequence drawn and animated entirely in code.</p>
+      </a>
+    </li>
+    <li class="project-card" data-category="code">
+      <a class="project-link" href="projects/procedural-landscape.html" aria-labelledby="title-procedural-landscape">
+        <div class="project-thumb" style="--accent: #ffc592"><img src="assets/coursework/procedural-landscape.webp" alt="" loading="lazy" decoding="async"></div>
+        <p class="project-type">Generative sketch</p>
+        <h3 id="title-procedural-landscape">Simple Drawing</h3>
+        <p class="project-summary">A sunset mountain landscape that redraws its ridgelines from randomized points.</p>
+      </a>
+    </li>
+    <li class="project-card" data-category="design">
+      <a class="project-link" href="projects/steam-deck-poster.html" aria-labelledby="title-steam-deck-poster">
+        <div class="project-thumb inset" style="--accent: #d2cbf9"><img src="assets/coursework/steam-deck-poster.webp" alt="" loading="lazy" decoding="async"></div>
+        <p class="project-type">Promotional design</p>
+        <h3 id="title-steam-deck-poster">Steam Deck Poster</h3>
+        <p class="project-summary">An unofficial poster study that presents the Steam Deck through a bold headline and a single focal image.</p>
+      </a>
+    </li>
+    <li class="project-card" data-category="games">
+      <a class="project-link" href="projects/antivirus.html" aria-labelledby="title-antivirus">
+        <div class="project-thumb" style="--accent: #f9c6e3"><img src="assets/unity/antivirus-gameplay.webp" alt="" loading="lazy" decoding="async"></div>
+        <p class="project-type">Unity prototype</p>
+        <h3 id="title-antivirus">Antivirus</h3>
+        <p class="project-summary">A first-person action prototype that sends the player inside a computer to confront a Trojan Horse boss.</p>
+      </a>
+    </li>
+    <li class="project-card" data-category="design">
+      <a class="project-link" href="projects/game-menu-prototypes.html" aria-labelledby="title-game-menu-prototypes">
+        <div class="project-thumb" style="--accent: #ddd9ee"><div class="project-art" aria-hidden="true"><strong>START MENU</strong><span>Mode select · Settings · Video</span></div></div>
+        <p class="project-type">Interface design</p>
+        <h3 id="title-game-menu-prototypes">Game Menu Prototypes</h3>
+        <p class="project-summary">A Figma study for how players move from a game’s start screen to modes and video settings.</p>
+      </a>
+    </li>
+    <li class="project-card" data-category="data">
+      <a class="project-link" href="projects/pandemic-gpu-data.html" aria-labelledby="title-pandemic-gpu-data">
+        <div class="project-thumb" style="--accent: #d9ecaa"><img src="assets/coursework/pandemic-gpu-data.webp" alt="" loading="lazy" decoding="async"></div>
+        <p class="project-type">Data visualization</p>
+        <h3 id="title-pandemic-gpu-data">COVID-19, GPUs, and Bitcoin</h3>
+        <p class="project-summary">A Python chart study comparing GPU shipments, reported COVID-19 cases, and Bitcoin prices.</p>
+      </a>
+    </li>
+    <li class="project-card" data-category="data">
+      <a class="project-link" href="projects/earthquake-energy.html" aria-labelledby="title-earthquake-energy">
+        <div class="project-thumb" style="--accent: #facfba"><div class="project-art" aria-hidden="true"><strong>MAGNITUDE</strong><span>Earthquake energy</span></div></div>
+        <p class="project-type">Python exercise</p>
+        <h3 id="title-earthquake-energy">Earthquake Energy Calculator</h3>
+        <p class="project-summary">A command-line exercise that translates earthquake magnitude into an energy estimate.</p>
+      </a>
+    </li>
+    <li class="project-card" data-category="data">
+      <a class="project-link" href="projects/word-guessing.html" aria-labelledby="title-word-guessing">
+        <div class="project-thumb" style="--accent: #c7eaf4"><div class="project-art" aria-hidden="true"><strong>_ O R _</strong><span>Guess a letter</span></div></div>
+        <p class="project-type">Python exercise</p>
+        <h3 id="title-word-guessing">Word Guessing Game</h3>
+        <p class="project-summary">A terminal word game that reveals letters while tracking incorrect guesses.</p>
+      </a>
+    </li>
+    </ul>
+  </section>
+  <section id="about" class="about" aria-labelledby="about-title">
+    <div class="wrap about-layout">
+      <div>
+        <p class="eyebrow">University of Toronto Mississauga</p>
+        <h2 id="about-title" class="section-heading">About me</h2>
+      </div>
+      <div class="about-copy">
+        <p>At the University of Toronto Mississauga, I studied Communication, Culture, Information and Technology alongside Technology, Code and Society. Drawing a character on my laptop opened up a new interest in visual work. In my coursework, that interest found its way into everything from illustrated game worlds to a mushroom-themed website.</p>
+        <ul class="skills">
+          <li><strong>Game development</strong> with Unity, Ren’Py, and Pygame</li>
+          <li><strong>Interactive prototypes</strong> with JavaScript, p5.js, and Figma</li>
+          <li><strong>Visual communication</strong> through illustration, layout, and data visualization</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Isuru Vithanaarchchige <span aria-hidden="true">·</span> University portfolio</p>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
 </body>
 </html>
